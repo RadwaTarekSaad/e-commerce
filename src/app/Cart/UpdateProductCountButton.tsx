@@ -5,9 +5,9 @@ import React from 'react'
 import { updateProductCount } from './cart.actions'
 import { toast } from 'sonner'
 
-export default function UpdateProductCountButton({isIncrement=false,id,newCount}:{isIncrement?:boolean,id:string,newcount:number}) {
+export default function UpdateProductCountButton({isIncrement=false,id,newcount}:{isIncrement?:boolean,id:string,newcount:number}) {
     async function handleUpdateCount(){
-    const  numOfCartItems=  await updateProductCount(id,newCount)
+    const  numOfCartItems=  await updateProductCount(id,newcount)
     if(numOfCartItems){
         toast.success(`product count ${isIncrement?"Incremented":"Decremented"} successfully`,{position:"top-right"})
     }else{
@@ -15,7 +15,7 @@ export default function UpdateProductCountButton({isIncrement=false,id,newCount}
     }
     }
   return (
-     <Button onClick={handleUpdateCount} disabled={newCount<=0} variant='outline'>
+     <Button onClick={handleUpdateCount} disabled={newcount<=0} variant='outline'>
         {isIncrement?"+":"-"}
         </Button>
   )

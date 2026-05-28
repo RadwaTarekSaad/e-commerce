@@ -68,9 +68,9 @@ const{products,totalCartPrice,_id}= UserCart as CartResponse
             <TableCell >
                  <div>
                      <div className='flex gap-2 items-center justify-center'>
-                <UpdateProductCountButton id={item.product.id} newCount={item.count-1}/>
+                <UpdateProductCountButton id={item.product.id} newcount={item.count - 1}/>
                 <span className='font-bold text-xl'>{item.count}</span>
-                <UpdateProductCountButton id={item.product.id} newCount={item.count+1} isIncrement/>
+                <UpdateProductCountButton id={item.product.id} newcount={item.count + 1 } isIncrement/>
                  </div>
                  </div>
              <RemoveProductButton id={item.product.id}/>
