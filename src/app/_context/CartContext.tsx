@@ -24,7 +24,7 @@ export default function CartContext({children,res}:{children:ReactNode,res: Cart
 
 }
   return (
-    <cartContext.Provider value={{numberOfCartItems,setNumberOfCartItems,updateNumberOfCartItems}}>
+    <cartContext.Provider value={{numberOfCartItems,updateNumberOfCartItems}}>
     {children}
       
     </cartContext.Provider>
